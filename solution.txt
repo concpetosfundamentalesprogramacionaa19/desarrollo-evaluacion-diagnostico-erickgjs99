@@ -1,0 +1,42 @@
+Proc 1: Calcular impuesto
+	(nAutos[10], i[0-N])
+	(marcAuto, 20x[a-z])
+	(originCar, 20x[a-z])
+	(costAutos, d[0-N])
+	(finalcost, d[0-N])
+	(calc, d[0-N])
+	Escriba "?Cuantos autos desea calcular los impuestos"
+	Leer nAutos[N]
+	Mq nAutos[N] <= N Haga
+		Escriba "Ingrese La marca de vehiculo"
+		Leer marcAutos
+		nAutos[N] <- marcAutos
+		Escriba "Ingrese el pais de origen del vehiculo en minusculas por favor"
+		Leer originCar
+		nAutos[N] <- originCar
+		Escriba "Ingrese el costo del vehiculo"
+		Leer costAutos
+		nAutos[N] <- marcAutos
+	Fin_Mq
+	Si originCar == "argentina" Entonces
+		calc <-  costAutos * 0.2 
+		finalCost <- calc + costAutos
+	Fin_Si
+	Si originCar == "colombia" Entonces
+		calc <-  costAutos * 0.25 
+		finalCost <- calc + costAutos
+	Fin_Si
+	Si originCar == "chile" Entonces
+		calc <-  costAutos * 0.3 
+		finalCost <- calc + costAutos
+	Sino
+		calc <-  (costAutos * 0.4)
+		finalCost <- calc + costAutos 
+	Fin_Si
+	Escribir "El total de autos importados es de: ",  nAutos[N]
+	Escribir "El impuesto generado para el vehiculo: ", nAutos[N], " de marca ", marcAuto " es de: ", calc
+	Escribir "El valor total del vehiculo es de: ", finalcost, " USD"
+	Escribir "Los paises de origen de los vehiculos son de: ", nAutos <- marcAutos
+	 
+
+		
